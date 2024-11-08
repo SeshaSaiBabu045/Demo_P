@@ -1,0 +1,10 @@
+<h1>Single Article component.</h1>
+<div>Enable PII: ${properties.checkbox ? 'checked':'unchecked'}</div>
+<div data-sly-test.cssClass="${properties.checkbox}">
+    <p data-sly-test="${cssClass}">CSS Class:${properties.cssClass}</p>
+</div>
+
+<sly data-sly-use.clientlib="${'/libs/granite/sightly/templates/clientlib.html'}"
+data-sly-call="${clientlib.all @ categories='Samplelibs'}" data-sly-unwrap/>
+
+<script src="/apps/aemgeeks/components/Single Article/clientlib/checkbox.js"></script>

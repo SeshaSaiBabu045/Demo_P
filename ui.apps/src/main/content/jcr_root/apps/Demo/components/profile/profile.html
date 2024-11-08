@@ -1,0 +1,11 @@
+<sly data-sly-resource="${resource}">
+    <div class="profile">
+        <!-- Render the name -->
+        <h2>${resource.properties['name']}</h2>
+
+        <!-- Render the selected image -->
+        <div class="profile-image">
+            <img src="${resource.properties['imagePath'] @ context='uri'}" alt="${resource.properties['name']}" />
+        </div>
+    </div>
+</sly>

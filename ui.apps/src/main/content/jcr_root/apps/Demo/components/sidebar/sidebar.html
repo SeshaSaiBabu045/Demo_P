@@ -1,0 +1,35 @@
+<h1>task 3</h1>
+<sly data-sly-use.Obj="com.adobe.aem.guides.demo.core.models.MainTabs1">
+  <div>this is header : ${Obj.header}</div>
+  <p>this is logo image : ${Obj.logopath}</p>
+  <p>this is mobile logo: ${Obj.logomobileimage}</p>
+  <p>this is link: ${Obj.link}</p>
+  <p>click The DropDown :${Obj.dropdown}</p>
+  <p></p>
+  <p>this is checkbox : ${Obj.checkbox}</p>
+
+  <sly data-sly-list="${Obj.multifield}">
+    <p>enter the frist name : ${item.fristname}</p>
+    <p>enter the image : ${item.image}</p>
+  </sly>
+  <h1>TAB 3 INFO</h1>
+  <sly data-sly-list="${Obj.sidebar3}">
+    <p>
+      pic the Mobileicon :<img
+        src="${item.mobileicon}"
+        height="100"
+        width="50"
+      />
+    </p>
+    <p>
+      pic the desktop icon :<img
+        src="${item.desktopicon}"
+        height="100"
+        width="50"
+      />
+    </p>
+    <sly data-sly-list.Hoo="${item.nestedmultifield}">
+      <p>enter the navigationurl: ${Hoo.navigationurl}</p>
+    </sly>
+  </sly>
+</sly>

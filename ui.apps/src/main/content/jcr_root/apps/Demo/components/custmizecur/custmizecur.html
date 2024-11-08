@@ -1,0 +1,13 @@
+
+
+<sly
+  data-sly-use.custmizecurModel="com.adobe.aem.guides.demo.core.models.Custmizecur"
+>
+  <sly data-sly-list.G="${custmizecurModel.sai}">
+    <p>enter the text here : ${G.custmizecur}</p>
+    <p>enter the Path here : ${G.path}</p>
+    <sly data-sly-list.F="${G.sesha}">
+      <h1>Enter The Book Name : ${F.books}</h1>
+    </sly>
+  </sly>
+</sly>

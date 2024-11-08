@@ -1,0 +1,10 @@
+<h1>Creating an AEM Header Component with Path, Text, Multifield, and Checkbox</h1>
+<div data-sly-use.Sa="com.adobe.aem.guides.demo.core.models.Headercom">
+  <div>Enter the name: ${Sa.text}</div>
+  <div>Enter the path:<img src="${Sa.image}"></div>
+  <div>Click the checkbox here: ${Sa.checkbox ? 'Checked' : 'Unchecked'}</div>
+  <div data-sly-list.Hm="${Sa.multifield}">
+    <div>Enter the name: ${Hm.name}</div>
+    <div>enter the date : ${'yyyy-MM-dd' @format = Hm.date}</div>
+  </div>
+</div>
